@@ -10,7 +10,7 @@ export const test = async (req: Request, res: Response): Promise<void> => {
       return fib[n];
     }
 
-    res.status(200).send(fibonacci(8));
+    res.status(200).send(fibonacci(9));
   } catch (error) {
     res.sendStatus(500);
   }
