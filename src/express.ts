@@ -1,5 +1,5 @@
 import express, { Express, Router } from "express";
-import { helloWorld } from "./helloWorld";
+import { test } from "./test";
 
 /**
  * Initializes the http routes that Express will serve.
@@ -9,7 +9,7 @@ export const initExpressRoutes = (expressServer: Express): Router => {
   const router = express.Router();
   expressServer.use("/", router);
 
-  router.get("/hello-world", helloWorld);
+  router.get("/test", test);
 
   router.get("*", (req, res) => {
     res.sendStatus(404);
